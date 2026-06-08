@@ -1,10 +1,13 @@
 # 1. class and object
 # create car class with attributes(variables) like brand and model. then create an instance of that class
+
 class Car:
+  total_cars = 0 
   def __init__(self, brand, model): #self refers to whoever calls the function/context, __init__ function is known as a  constructor
       self.__brand = brand #self.brand refers to the variables within the class, whereas brand model refers to paramaters passed by the user
       #brand is privated using encapsulation 
       self.model = model
+      Car.total_car += 1
     
   # 4. Encapsulation
   # modify car class to encapsulate the brand attribute, making it private and provide a getter method for it 
@@ -20,7 +23,7 @@ class Car:
 
 # 5. Polymorphism
 # demonstrate polymorphism by defining a method fuel_type in both Car and ElectricCar classes with different behaviour
-def fuel_type(self):
+def fuel_type(self): # method 
   return "Petrol and Diesel"
 
 # 3. Inheritance 
@@ -36,6 +39,9 @@ class ElectricCar(Car): # inherits proprties of car class ie brand and model
 my_tesla = ElectricCar("tesla", "model s", "85kWH")
 print(my_tesla.model)
 print(my_tesla.get_brand())
+
+safari = Car("tata", "safari")
+print(safari.fuel_type())
 
 my_car = Car("toyota", "corolla") # object 
 print(my_car.__brand)
