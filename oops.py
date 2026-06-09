@@ -3,8 +3,10 @@
 
 class Car:
   total_cars = 0 
+  
+  #default constructor
   def __init__(self, brand, model): #self refers to whoever calls the function/context, __init__ function is known as a  constructor
-      self.__brand = brand #self.brand refers to the variables within the class, whereas brand model refers to paramaters passed by the user
+      self.__brand = brand #self.brand refers to the variables/instances within the class, whereas brand model refers to paramaters passed by the user 
       #brand is privated using encapsulation 
       self.model = model
       Car.total_car += 1
@@ -12,6 +14,7 @@ class Car:
   # 4. Encapsulation
   # modify car class to encapsulate the brand attribute, making it private and provide a getter method for it 
 
+  #paramaterised constructor
   def get_brand(self):
     return self.__brand + " !"
     
@@ -23,8 +26,8 @@ class Car:
 
 # 5. Polymorphism
 # demonstrate polymorphism by defining a method fuel_type in both Car and ElectricCar classes with different behaviour
-def fuel_type(self): # method 
-  return "Petrol and Diesel"
+ def fuel_type(self): # method - functions that belong to objects
+   return "Petrol and Diesel"
 
 # 3. Inheritance 
 # create an electric car class that oinherits from car class and has an additional attribute battery_size 
@@ -51,3 +54,8 @@ print(my_new_car.model) # class defination hence no paranthesis needed
 # generalised form, usually the class is created in a seperate file imported whenever it is to be used 
 
 print(my_new_car.full_name()) # defined functions adds functionality, hence paranthesis should be added to the function call
+
+#types of attributes 
+# 1. class attributes: owned by the class, common for all in class
+# 2. instance attributes: different for each object
+
