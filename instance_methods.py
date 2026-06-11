@@ -59,3 +59,12 @@ print(my_new_car.full_name()) # defined functions adds functionality, hence para
 # 1. class attributes: owned by the class, common for all in class
 # 2. instance attributes: different for each object
 
+#property decorator - is used in the class to use the method as a property
+class Student:
+  def __init__(self,phy,chem,math):
+    self.phy = phy
+    self.chem = chem
+    self.math = math
+    self.percentage = str((self.phy+self.chem+self.math)/3) + "%"
+    
+    
