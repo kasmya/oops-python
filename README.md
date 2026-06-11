@@ -87,3 +87,44 @@ class Circle(Shape):
 c = Circle(5)
 print("Area of circle:", c.area())
 ```
+## 📝 Types of Methods in Python Classes
+
+### 1. Instance Methods
+- Defined with `self` as the first parameter.
+- Operate on a specific object instance.
+- Can access and modify **instance attributes**.
+
+```python
+class Car:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def show_brand(self):   # instance method
+        return f"Car brand is {self.brand}"
+```
+### 2. Class Methods
+- Defined with @classmethod decorator.
+- First parameter is cls (the class itself).
+- Can access and modify class-level attributes.
+- Often used for factory methods.
+  
+```python
+class Car:
+    wheels = 4
+
+    @classmethod
+    def show_wheels(cls):   # class method
+        return f"Cars have {cls.wheels} wheels"
+```
+### 3. Static Methods
+- Defined with @staticmethod decorator.
+- No self or cls parameter.
+- Behave like normal functions but live inside the class namespace.
+- Used for utility/helper functions.
+
+```python
+class Car:
+    @staticmethod
+    def greet(name):   # static method
+        return f"Hello, {name}!"
+```
