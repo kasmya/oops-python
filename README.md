@@ -128,3 +128,13 @@ class Car:
     def greet(name):   # static method
         return f"Hello, {name}!"
 ```
+## 🔑 Static vs Non‑Static Methods in Python
+
+- **Static Methods (`@staticmethod`)**
+  - No `self` or `cls`.
+  - Do not access or modify instance/class state.
+  - Used for utility/helper functions.
+
+- **Non‑Static Methods**
+  - **Instance Methods (`self`)** → bound to object, access instance data.
+  - **Class Methods (`cls`)** → bound to class, access class data.
