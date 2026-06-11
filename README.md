@@ -138,3 +138,25 @@ class Car:
 - **Non‑Static Methods**
   - **Instance Methods (`self`)** → bound to object, access instance data.
   - **Class Methods (`cls`)** → bound to class, access class data.
+
+## 🎀 Python Decorators 
+
+### 🔹 @staticmethod
+- No `self` or `cls`.
+- Acts like a plain function inside the class.
+- Use for **utility/helper functions** that don’t depend on instance or class data.
+
+### 🔹 @classmethod
+- First argument is `cls` (the class itself).
+- Can access/modify **class-level attributes**.
+- Use for **factory methods** or logic that applies to the whole class.
+
+### 🔹 @property
+- First argument is `self` (instance).
+- Turns a method into a **read-only attribute**.
+- Use for **controlled access to instance data** (getter/setter/deleter).
+
+### ⚖️ Quick Memory Hook
+- **Static → utility only**  
+- **Class → class-wide logic**  
+- **Property → instance attribute access**
