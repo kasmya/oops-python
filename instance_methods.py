@@ -65,6 +65,11 @@ class Student:
     self.phy = phy
     self.chem = chem
     self.math = math
-    self.percentage = str((self.phy+self.chem+self.math)/3) + "%"
-    
-    
+    # self.percentage = str((self.phy+self.chem+self.math)/3) + "%"
+
+  @property #if any change in properties hence this will change accordingly
+  def percentage(self):
+    return str((self.phy+self.chem+self.math)/3) + "%"
+
+stu = Student(98,67,69)
+print(stu.percentage)
