@@ -87,6 +87,8 @@ class Circle(Shape):
 c = Circle(5)
 print("Area of circle:", c.area())
 ```
+---
+
 ## 📝 Types of Methods in Python Classes
 
 ### 1. Instance Methods
@@ -139,6 +141,7 @@ class Car:
   - **Instance Methods (`self`)** → bound to object, access instance data.
   - **Class Methods (`cls`)** → bound to class, access class data.
 
+---
 ## 🎀 Python Decorators 
 
 ### 🔹 @staticmethod
