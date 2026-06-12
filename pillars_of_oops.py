@@ -118,4 +118,46 @@ print(c1.varA)
 print(c1.varB)
 print(c1.varC)
 
-# 4. POLYMORPHISM 
+# 4. POLYMORPHISM - ex. Operator Overloading
+# when same operator is allowed to have different meaning according to the context
+
+print(1+2) #add
+print(type(1)) #class int 
+
+print('6'+'7') #concatenate
+print(type('6') #class string
+      
+print([6]+[7]) #merge
+print(type([6])) #class list
+
+#for each class the meaning of the operator is defined by python implicitly
+#in oops we can define the meaning of any operator as per our requirement using dunder functions (functions starting and ending with __)
+class Complex:
+  def __init__(self, real, img):
+    self.real = real
+    self.img = img
+
+  def __add__(self, num2): #dunder function
+    newReal = self.real + num2.real
+    newImg = self.img + num2.img
+    return Complex(newReal, newImg)
+
+   def __sub__(self, num2): #dunder function
+    newReal = self.real - num2.real
+    newImg = self.img - num2.img
+    return Complex(newReal, newImg)
+     
+  def show_number(self):
+    print(self.real, "i +", self.img, "j")
+
+num1 = Complex(1,2)
+num1.show_number()
+
+num2 = Complex(3,2)
+num2.show_number()
+
+num3 = num1 + num2  #using dunder functions complex numbers can be added, logic is defined
+num3.show_number()
+
+num4 = num2 - num1
+num4.show_number()
